@@ -2,10 +2,12 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+import { NavbarApp } from "./components/NavbarApp"
+
 function App() {
   return (
     <>
-      <h1>Social Movement</h1>
+      <NavbarApp />
     </>
   )
 }
