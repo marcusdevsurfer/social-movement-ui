@@ -26,8 +26,8 @@ export const UnitsBox = () => {
                     {units
                         .filter((e) => query == '' ? units : e.carrier.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()) || e.unit.ton.includes(query))
                         .map(({ carrier, unit }) =>
-                            <Col lg='4'>
-                                <Card className='mb-2'>
+                            <Col lg='4' className='p-2'>
+                                <Card>
                                     <Card.Header>
                                         <Stack direction='horizontal'>
                                             <h5 className='m-0'>{carrier.name}</h5>
