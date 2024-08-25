@@ -6,6 +6,7 @@ import Badge from 'react-bootstrap/Badge'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 import { useState } from 'react'
 
@@ -77,7 +78,7 @@ export const UnitsBox = () => {
     const [query, setQuery] = useState('')
 
     return (
-        <Container style={{minHeight: '100vh'}} fluid className='bg-tertiary'>
+        <Container style={{ minHeight: '100vh' }} fluid className='bg-tertiary'>
             <Container>
                 <Row className='p-1'>
                     <Col lg='4' className='my-1 p-0'>
@@ -97,7 +98,8 @@ export const UnitsBox = () => {
                                     <Card.Header>
                                         <Stack direction='horizontal' gap='2'>
                                             <h5 className='m-0'>{carrier.name}</h5>
-                                            <Card.Link>Ver perfil</Card.Link>
+                                            <a href="">Ver perfil</a>
+                                            <Button size='sm'>Ver perfil</Button>
                                         </Stack>
                                     </Card.Header>
 
