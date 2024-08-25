@@ -30,23 +30,22 @@ export const UnitsBox = () => {
                                 <Card>
                                     <Card.Header>
                                         <Stack direction='horizontal'>
-                                            <h5 className='m-0'>{carrier.name}</h5>
+                                            <h5 className='m-0 text-muted'>{carrier.name}</h5>
                                             <Button className='ms-auto' variant='success' size='sm'>Ver perfil</Button>
                                         </Stack>
                                     </Card.Header>
 
                                     <Card.Body>
-                                        <Card.Img variant="bottom" src={img} />
+                                        <Card.Img src={img} />
                                     </Card.Body>
 
                                     <Card.Footer>
-                                        <h5>Especificaciones</h5>
+                                        <h5 className='text-muted'>Caracteristicas</h5>
                                         <Stack direction='horizontal' gap={1}>
-                                            <Badge>{unit.ton} Ton</Badge>
+                                            <Badge>{unit.ton} Toneladas</Badge>
                                             <Badge>Carga suelta</Badge>
                                         </Stack>
-
-                                        <h5>Contacto</h5>
+                                        <h5 className='text-muted'>Contacto</h5>
                                         <Stack direction='horizontal' gap={1}>
                                             <Badge>{carrier.email}</Badge>
                                             <Badge>{carrier.phone}</Badge>
