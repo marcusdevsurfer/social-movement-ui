@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-
 import { useState } from 'react'
 
 const units = [
@@ -80,26 +79,23 @@ export const UnitsBox = () => {
     return (
         <Container style={{ minHeight: '100vh' }} fluid className='bg-tertiary'>
             <Container>
-                <Row className='p-1'>
-                    <Col lg='4' className='my-1 p-0'>
-                        <Form onSubmit={(e) => alert(e)}>
-                            <Form.Group>
-                                <Stack direction='horizontal'>
-                                    <Form.Control value={query} placeholder='Busqueda (Ej: 3.5 toneladas, Transportes Flores)' onChange={(e) => setQuery(e.target.value)}></Form.Control>
-                                </Stack>
-                            </Form.Group>
-                        </Form>
-                    </Col>
-                    <Col className='p-1'>
-                        {units
-                            .filter((e) => query == '' ? units : e.carrier.name.includes(query) || e.unit.ton.includes(query))
-                            .map(({ carrier, unit }) =>
+                <Form className='mb-2'>
+                    <Form.Group>
+                        <Stack direction='horizontal'>
+                            <Form.Control value={query} placeholder='Busqueda (Ej: 3.5 toneladas, Transportes Flores)' onChange={(e) => setQuery(e.target.value)}></Form.Control>
+                        </Stack>
+                    </Form.Group>
+                </Form>
+                <Row>
+                    {units
+                        .filter((e) => query == '' ? units : e.carrier.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()) || e.unit.ton.includes(query))
+                        .map(({ carrier, unit }) =>
+                            <Col lg='4'>
                                 <Card className='mb-2'>
                                     <Card.Header>
-                                        <Stack direction='horizontal' gap='2'>
+                                        <Stack direction='horizontal'>
                                             <h5 className='m-0'>{carrier.name}</h5>
-                                            <a href="">Ver perfil</a>
-                                            <Button size='sm'>Ver perfil</Button>
+                                            <Button className='ms-auto' variant='success' size='sm'>Ver perfil</Button>
                                         </Stack>
                                     </Card.Header>
 
@@ -121,8 +117,8 @@ export const UnitsBox = () => {
                                         </Stack>
                                     </Card.Footer>
                                 </Card>
-                            )}
-                    </Col>
+                            </Col>
+                        )}
                 </Row>
             </Container>
         </Container>
