@@ -5,33 +5,27 @@ import Stack from 'react-bootstrap/Stack'
 import Badge from 'react-bootstrap/Badge'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 import { units } from '../commons/data'
+import { FindBar } from './FindBar'
 
 export const UnitsBox = () => {
     const [query, setQuery] = useState('')
     return (
         <Container style={{ minHeight: '100vh' }} fluid className='bg-tertiary'>
             <Container>
-                <Form className='mb-2'>
-                    <Form.Group>
-                        <Stack direction='horizontal'>
-                            <Form.Control value={query} placeholder='Busqueda (Ej: 3.5 toneladas, Transportes Flores)' onChange={(e) => setQuery(e.target.value)}></Form.Control>
-                        </Stack>
-                    </Form.Group>
-                </Form>
+                <FindBar query={query} setQuery={setQuery} />
                 <Row>
                     {units
                         .filter((e) => query == '' ? units : e.carrier.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()) || e.unit.ton.includes(query))
                         .map(({ carrier, unit }) =>
-                            <Col lg='4' className='p-2'>
+                            <Col lg='4' className='p-2' key={carrier.email}>
                                 <Card>
                                     <Card.Header>
                                         <Stack direction='horizontal'>
                                             <h5 className='m-0 text-muted'>{carrier.name}</h5>
-                                            <Button className='ms-auto' variant='success' size='sm'>Ver perfil</Button>
+                                            <Button className='ms-auto' variant='warning' size='sm'>Ver perfil</Button>
                                         </Stack>
                                     </Card.Header>
 
@@ -42,13 +36,13 @@ export const UnitsBox = () => {
                                     <Card.Footer>
                                         <h5 className='text-muted'>Caracteristicas</h5>
                                         <Stack direction='horizontal' gap={1}>
-                                            <Badge>{unit.ton} Toneladas</Badge>
-                                            <Badge>Carga suelta</Badge>
+                                            <Badge className='bg-secondary'>{unit.ton} Toneladas</Badge>
+                                            <Badge className='bg-secondary'>Carga suelta</Badge>
                                         </Stack>
                                         <h5 className='text-muted'>Contacto</h5>
                                         <Stack direction='horizontal' gap={1}>
-                                            <Badge>{carrier.email}</Badge>
-                                            <Badge>{carrier.phone}</Badge>
+                                            <Badge className='bg-secondary'>{carrier.email}</Badge>
+                                            <Badge className='bg-secondary'>{carrier.phone}</Badge>
                                         </Stack>
                                     </Card.Footer>
                                 </Card>
