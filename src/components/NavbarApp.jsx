@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 
 export const NavbarApp = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary mb-2">
+        <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
             <Container>
                 <Navbar.Brand href="#">Social</Navbar.Brand>
                 <Navbar.Toggle />
