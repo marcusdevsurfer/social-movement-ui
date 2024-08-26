@@ -12,7 +12,7 @@ export const UnitCard = ({carrier, unit}) => {
                 <Card.Header>
                     <Stack direction='horizontal'>
                         <h5 className='m-0'>{carrier.name}</h5>
-                        <Button className='ms-auto' variant='warning' size='sm'>Ver perfil</Button>
+                        <Button className='ms-auto' variant='primary' size='sm'>Ver perfil</Button>
                     </Stack>
                 </Card.Header>
 
