@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container'
 import { useState } from 'react'
 import { FindBar } from './FindBar'
 import { UnitList } from './UnitList'
+import { CarrierProfile } from './CarrierProfile'
 
 export const UnitsBox = () => {
     const [query, setQuery] = useState('')
@@ -9,7 +10,8 @@ export const UnitsBox = () => {
         <Container style={{ minHeight: '100vh' }} fluid className='bg-body-tertiary'>
             <Container >
                 <FindBar query={query} setQuery={setQuery} />
-                <UnitList query={query} />
+                <CarrierProfile/>
+                {/* <UnitList query={query} /> */}
             </Container>
         </Container>
     )
