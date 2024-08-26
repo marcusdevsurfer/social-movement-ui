@@ -6,8 +6,8 @@ import { UnitList } from './UnitList'
 export const UnitsBox = () => {
     const [query, setQuery] = useState('')
     return (
-        <Container style={{ minHeight: '100vh' }} fluid className='bg-tertiary'>
-            <Container>
+        <Container style={{ minHeight: '100vh' }} fluid className='bg-secondary p-2'>
+            <Container >
                 <FindBar query={query} setQuery={setQuery} />
                 <UnitList query={query} />
             </Container>
