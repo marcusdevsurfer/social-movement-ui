@@ -4,12 +4,20 @@
 
 import { UnitsBox } from "./components/UnitsBox"
 import { NavbarApp } from "./components/NavbarApp"
+import { CarrierProfile } from "./components/CarrierProfile"
 
 function App() {
   return (
     <>
       <NavbarApp />
+
+      {/* Unidades compomente */}
       <UnitsBox />
+
+      {/* Perfil de la empresa */}
+      <CarrierProfile/>
+
+
     </>
   )
 }
