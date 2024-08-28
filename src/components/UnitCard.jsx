@@ -5,14 +5,14 @@ import Badge from 'react-bootstrap/Badge'
 import Button from 'react-bootstrap/Button'
 import img from '../assets/example.png'
 
-export const UnitCard = ({carrier, unit}) => {
+export const UnitCard = ({ carrier, unit }) => {
     return (
         <Col lg='4' className='p-2' key={carrier.email}>
             <Card>
-                <Card.Header>
+                <Card.Header style={{ backgroundColor: '#FFFFFF' }}>
                     <Stack direction='horizontal'>
                         <h5 className='m-0'>{carrier.name}</h5>
-                        <Button style={{backgroundColor: '#3E8E41', borderColor: 'transparent'}} className='ms-auto' size='sm'>Ver perfil</Button>
+                        <Button style={{ backgroundColor: '#3E8E41', borderColor: 'transparent' }} className='ms-auto' size='sm'>Ver perfil</Button>
                     </Stack>
                 </Card.Header>
 
@@ -21,16 +21,12 @@ export const UnitCard = ({carrier, unit}) => {
                 </Card.Body>
 
                 <Card.Footer>
-                    <h5 className='text-muted'>Caracteristicas</h5>
-                    <Stack direction='horizontal' gap={1}>
-                        <Badge className='bg-secondary'>{unit.ton} Toneladas</Badge>
-                        <Badge className='bg-secondary'>Carga suelta</Badge>
-                    </Stack>
-                    <h5 className='text-muted'>Contacto</h5>
-                    <Stack direction='horizontal' gap={1}>
-                        <Badge className='bg-secondary'>{carrier.email}</Badge>
-                        <Badge className='bg-secondary'>{carrier.phone}</Badge>
-                    </Stack>
+                    <h5 className='m-0'>Caracteristicas</h5>
+                    <Badge className='bg-secondary'>{unit.ton} Toneladas</Badge>
+                    <Badge className='bg-secondary ms-1'>Carga suelta</Badge>
+                    <h5 className='m-0'>Contacto</h5>
+                    <Badge className='bg-secondary'>{carrier.email}</Badge>
+                    <Badge className='bg-secondary ms-1'>{carrier.phone}</Badge>
                 </Card.Footer>
             </Card>
         </Col>
