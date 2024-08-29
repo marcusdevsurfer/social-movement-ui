@@ -11,11 +11,15 @@ function App() {
   return (
     <>
       <NavbarApp />
+      {/* Unidades compomente */}
+      <Route path="/" component={UnitsBox} />
+      {/* Perfil de la empresa */}
+      <Route path="/profile" component={CarrierProfile} />
       <Switch>
         {/* Unidades compomente */}
-        <Route path="/" component={UnitsBox} />
+        {/* <Route path="/" component={UnitsBox} /> */}
         {/* Perfil de la empresa */}
-        <Route path="/profile" component={CarrierProfile} />
+        {/* <Route path="/profile" component={CarrierProfile} /> */}
       </Switch>
     </>
   )
