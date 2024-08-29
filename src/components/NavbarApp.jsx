@@ -10,7 +10,7 @@ export const NavbarApp = () => {
     return (
         <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#F7F7F7' }} >
             <Container>
-                <Navbar.Brand href="#">Social</Navbar.Brand>
+                <Navbar.Brand href="/">Social</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
