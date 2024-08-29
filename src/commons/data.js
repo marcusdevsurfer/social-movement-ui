@@ -1,5 +1,6 @@
 export const units = [
     {
+        id: 1,
         carrier: {
             name: 'Transportes Flores',
             email: 'transportesflores@gmail.com',
@@ -11,6 +12,7 @@ export const units = [
         }
     },
     {
+        id: 2,
         carrier: {
             name: 'Transportes Manzanillo',
             email: 'transportesmanzanillo@gmail.com',
@@ -23,6 +25,7 @@ export const units = [
     }
     ,
     {
+        id: 3,
         carrier: {
             name: 'Juan Ramos',
             email: 'juanramos@gmail.com',
@@ -35,6 +38,7 @@ export const units = [
     }
     ,
     {
+        id: 4,
         carrier: {
             name: 'JASEZA',
             email: 'jaseza@gmail.com',
@@ -47,6 +51,7 @@ export const units = [
     }
     ,
     {
+        id: 5,
         carrier: {
             name: 'Transportes Roman',
             email: 'transportesroman@gmail.com',
@@ -57,5 +62,4 @@ export const units = [
             service: ''
         }
     }
-
 ]
