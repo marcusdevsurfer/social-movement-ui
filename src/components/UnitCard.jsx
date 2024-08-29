@@ -2,8 +2,8 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Stack from 'react-bootstrap/Stack'
 import Badge from 'react-bootstrap/Badge'
-import Button from 'react-bootstrap/Button'
 import img from '../assets/example.png'
+import { Link } from "wouter";
 
 export const UnitCard = ({ carrier, unit }) => {
     return (
@@ -12,7 +12,7 @@ export const UnitCard = ({ carrier, unit }) => {
                 <Card.Header style={{ backgroundColor: '#FFFFFF' }}>
                     <Stack direction='horizontal'>
                         <h5 className='m-0'>{carrier.name}</h5>
-                        <Button style={{ backgroundColor: '#3E8E41', borderColor: 'transparent' }} className='ms-auto' size='sm'>Ver perfil</Button>
+                        <Link style={{ backgroundColor: '#F7F7F7' }} className='btn btn-sm ms-auto' href="/profile">Ver perfil</Link>
                     </Stack>
                 </Card.Header>
 
