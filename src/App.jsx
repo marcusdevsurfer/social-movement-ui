@@ -4,12 +4,20 @@
 
 import { UnitsBox } from "./components/UnitsBox"
 import { NavbarApp } from "./components/NavbarApp"
+import { CarrierProfile } from "./components/CarrierProfile"
+import { Switch, Route } from "wouter"
 
 function App() {
   return (
     <>
       <NavbarApp />
-      <UnitsBox />
+      <Switch>
+        {/* Unidades compomente */}
+        <Route path="/" component={UnitsBox} />
+        {/* Perfil de la empresa */}
+        <Route path="/profile" component={CarrierProfile} />
+        <Route>404: Pagina no encontrada!</Route>
+      </Switch>
     </>
   )
 }
