@@ -16,7 +16,6 @@ function App() {
         <Route path="/" component={UnitsBox} />
         {/* Perfil de la empresa */}
         <Route path="/profile" component={CarrierProfile} />
-        <Route>404: Pagina no encontrada!</Route>
       </Switch>
     </>
   )
