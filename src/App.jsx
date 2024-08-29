@@ -5,7 +5,7 @@
 import { UnitsBox } from "./components/UnitsBox"
 import { NavbarApp } from "./components/NavbarApp"
 import { CarrierProfile } from "./components/CarrierProfile"
-import { Switch, Route } from "wouter"
+import { Route } from "wouter"
 
 function App() {
   return (
@@ -14,13 +14,7 @@ function App() {
       {/* Unidades compomente */}
       <Route path="/" component={UnitsBox} />
       {/* Perfil de la empresa */}
-      <Route path="/profile" component={CarrierProfile} />
-      <Switch>
-        {/* Unidades compomente */}
-        {/* <Route path="/" component={UnitsBox} /> */}
-        {/* Perfil de la empresa */}
-        {/* <Route path="/profile" component={CarrierProfile} /> */}
-      </Switch>
+      <Route path="/profile/:id" component={CarrierProfile} />
     </>
   )
 }
