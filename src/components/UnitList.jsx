@@ -11,7 +11,7 @@ export const UnitList = ({ query }) => {
                         ? units
                         : e.carrier.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()) || e.unit.ton.includes(query))
                     .map(({ carrier, unit }) =>
-                        <UnitCard carrier={carrier} unit={unit} />
+                        <UnitCard key={unit.id} carrier={carrier} unit={unit} />
                     )
             }
         </Row>

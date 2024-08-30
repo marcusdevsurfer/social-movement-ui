@@ -3,16 +3,19 @@ import Card from 'react-bootstrap/Card'
 import Stack from 'react-bootstrap/Stack'
 import Badge from 'react-bootstrap/Badge'
 import img from '../assets/example.png'
-import { Link } from "wouter";
+import { Link, useParams } from "wouter";
 
 export const UnitCard = ({ carrier, unit }) => {
+
+    const { id } = useParams()
+
     return (
-        <Col lg='4' className='p-2' key={carrier.email}>
-            <Card>
+        <Col lg='4' className='p-2' key={unit.id}>
+            <Card key={unit.id}>
                 <Card.Header style={{ backgroundColor: '#FFFFFF' }}>
                     <Stack direction='horizontal'>
                         <h5 className='m-0'>{carrier.name}</h5>
-                        <Link style={{ backgroundColor: '#F7F7F7' }} className='btn btn-sm ms-auto' href="/profile">Ver perfil</Link>
+                        <Link style={{ backgroundColor: '#F7F7F7' }} className='btn btn-sm ms-auto' to={'/profile/' + carrier.id}>Ver perfil</Link>
                     </Stack>
                 </Card.Header>
 

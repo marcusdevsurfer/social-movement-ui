@@ -1,12 +1,13 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Stack from 'react-bootstrap/Stack'
 import Container from 'react-bootstrap/Container'
 import logo from '../assets/logo.jpg'
 
 
 import Image from 'react-bootstrap/Image'
+import { useParams } from 'wouter'
+import { findCarrierById } from '../commons/service'
 
 // Azul oscuro (#2F4F7F)
 // Gris claro (#F7F7F7)
@@ -16,21 +17,13 @@ import Image from 'react-bootstrap/Image'
 
 
 export const CarrierProfile = () => {
+    const { id } = useParams()
+    const [carrierState, setCarrierState] = useState({})
 
-    const data = {
-        carrier: {
-            name: 'Transportes Flores',
-            email: 'transportesflores@gmail.com',
-            phone: '3141986645',
-            services: [
-                ''
-            ]
-        },
-        unit: {
-            ton: '3.5',
-            service: ''
-        }
-    }
+    useEffect(() => {
+        const data = findCarrierById(id)
+        setCarrierState(data)
+    }, [id])
 
     const style = {
         backgroundColor: '#2F4F7F',
@@ -41,9 +34,9 @@ export const CarrierProfile = () => {
     return (
         <Container fluid style={style} >
             <Container>
-                <Row style={{minHeight: '100vh'}} className='align-items-center text-center'>
+                <Row style={{ minHeight: '100vh' }} className='align-items-center text-center'>
                     <Col lg='7'>
-                        <h1 style={{ color: '#FFFFFF' }}>{data?.carrier?.name}</h1>
+                        <h1 style={{ color: '#FFFFFF' }}>{carrierState?.carrier?.name}</h1>
                     </Col>
                     <Col>
                         <Image src={logo} width={400} roundedCircle fluid />
