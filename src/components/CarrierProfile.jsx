@@ -36,7 +36,7 @@ export const CarrierProfile = () => {
             <Container>
                 <Row style={{ minHeight: '95vh' }} className='align-items-center text-center'>
                     <Col lg='7'>
-                        <h1 style={{ color: '#FFFFFF' }}>{carrierState?.carrier?.name}</h1>
+                        <h1 style={{ color: '#FFFFFF' }}>{carrierState?.name}</h1>
                     </Col>
                     <Col>
                         <Image src={logo} width={400} roundedCircle fluid />
