@@ -11,7 +11,7 @@ import { CarrierProfile } from './CarrierProfile'
 export const UnitsBox = () => {
     const [query, setQuery] = useState('')
     return (
-        <Container style={{ minHeight: '100vh', backgroundColor: '#2F4F7F' }} fluid>
+        <Container style={{ minHeight: '95vh', backgroundColor: '#2F4F7F' }} fluid>
             <Container >
                 <FindBar query={query} setQuery={setQuery} /> 
                 <UnitList query={query} />

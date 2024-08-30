@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 
 export const NavbarApp = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#F7F7F7' }} >
+        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#F7F7F7', minHeight:'8vh' }} >
             <Container>
                 <Navbar.Brand href="/">Social</Navbar.Brand>
                 <Navbar.Toggle />
