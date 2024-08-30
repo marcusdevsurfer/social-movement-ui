@@ -39,5 +39,28 @@ export const units = [
             service: ''
         }
     }
-    
+
+]
+
+
+
+export const carriers = [
+    {
+        id: 1,
+        name: 'Transportes Flores',
+        email: 'transportesflores@gmail.com',
+        phone: '3141986645'
+    },
+    {
+        id: 2,
+        name: 'Transportes Manzanillo',
+        email: 'transportesmanzanillo@gmail.com',
+        phone: '3148765544'
+    },
+    {
+        id: 3,
+        name: 'Juan Ramos',
+        email: 'juanramos@gmail.com',
+        phone: '3148765544'
+    },
 ]
