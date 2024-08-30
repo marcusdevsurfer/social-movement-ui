@@ -39,32 +39,5 @@ export const units = [
             service: ''
         }
     }
-    ,
-    {
-        id: 4,
-        carrier: {
-            id: 4,
-            name: 'JASEZA',
-            email: 'jaseza@gmail.com',
-            phone: '3148765544'
-        },
-        unit: {
-            ton: '4.0',
-            service: ''
-        }
-    }
-    ,
-    {
-        id: 5,
-        carrier: {
-            id: 5,
-            name: 'Transportes Roman',
-            email: 'transportesroman@gmail.com',
-            phone: '3148765544'
-        },
-        unit: {
-            ton: '7.0',
-            service: ''
-        }
-    }
+    
 ]
