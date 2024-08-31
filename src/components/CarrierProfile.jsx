@@ -4,13 +4,11 @@ import { useParams } from 'wouter'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Image from 'react-bootstrap/Image'
 import logo from '../assets/logo.jpg'
 import { CarrierCover } from './CarrierCover'
-
-
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
+
 // Azul oscuro (#2F4F7F)
 // Gris claro (#F7F7F7)
 // Verde oscuro (#3E8E41)
