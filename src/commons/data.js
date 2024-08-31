@@ -49,18 +49,33 @@ export const carriers = [
         id: 1,
         name: 'Transportes Flores',
         email: 'transportesflores@gmail.com',
-        phone: '3141986645'
+        phone: '3141986645',
+        services: [
+            'Fletes directos',
+            'Servicio de carga consolidada (LCL)',
+            'Manejo de materiales peligrosos'
+        ]
     },
     {
         id: 2,
         name: 'Transportes Manzanillo',
         email: 'transportesmanzanillo@gmail.com',
-        phone: '3148765544'
+        phone: '3148765544',
+        services: [
+            'Fletes directos',
+            'Manejo de materiales peligrosos'
+        ]
     },
     {
         id: 3,
         name: 'Juan Ramos',
         email: 'juanramos@gmail.com',
-        phone: '3148765544'
+        phone: '3148765544',
+        services: [
+            'Seguro de carga',
+            'Fletes directos',
+            'Servicio de carga consolidada (LCL)',
+            'Manejo de materiales peligrosos'
+        ]
     },
 ]
