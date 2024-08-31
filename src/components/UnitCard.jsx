@@ -8,9 +8,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 
 export const UnitCard = ({ carrier, unit }) => {
-
     const { id } = useParams()
-
     return (
         <Col lg='4' className='p-2' key={unit.id}>
             <Card key={unit.id}>
