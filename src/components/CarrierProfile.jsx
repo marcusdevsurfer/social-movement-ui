@@ -6,7 +6,11 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
 import logo from '../assets/logo.jpg'
-import { CarrierCover } from './Carrier/CarrierCover'
+import { CarrierCover } from './CarrierCover'
+
+
+import { HiOutlineMail } from "react-icons/hi";
+import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 // Azul oscuro (#2F4F7F)
 // Gris claro (#F7F7F7)
 // Verde oscuro (#3E8E41)
@@ -33,8 +37,9 @@ export const CarrierProfile = () => {
 
     return (
         <Container fluid >
+            <CarrierCover carrierName={carrierState.name} carrierLogo={logo} />
+
             <Container>
-                <CarrierCover carrierName={carrierState.name} carrierLogo={logo} />
                 <Row style={{ minHeight: '45vh' }} className='align-items-center text-center'>
                     <Col lg='7'>
                         <h1>Servicios</h1>
@@ -51,12 +56,17 @@ export const CarrierProfile = () => {
                     </Col>
                 </Row>
 
-                <Row style={{ minHeight: '45vh' }} className='align-items-center text-center justify-content-around'>
-                    <h1>Contacto</h1>
+                <Row style={{ minHeight: '45vh' }} className='align-items-center'>
+                    <h1 className='text-center'>Contacto</h1>
                     <Col>
-                        Datos de contacto
+                        <p>
+                            <HiOutlineMail /> {carrierState.email}
+                        </p>
+                        <p>
+                            <HiOutlinePhoneOutgoing /> {carrierState.phone}
+                        </p>
                     </Col>
-                    <Col>
+                    <Col className='text-end'>
                         Datos de ubicacion
                     </Col>
                 </Row>
