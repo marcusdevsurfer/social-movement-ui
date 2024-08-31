@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
 import logo from '../assets/logo.jpg'
+import { CarrierCover } from './Carrier/CarrierCover'
 // Azul oscuro (#2F4F7F)
 // Gris claro (#F7F7F7)
 // Verde oscuro (#3E8E41)
@@ -26,28 +27,40 @@ export const CarrierProfile = () => {
         backgroundColor: '#2F4F7F',
     }
 
+    const serviceListItem = {
+        listStyle: 'none'
+    }
 
     return (
         <Container fluid >
             <Container>
-                <Row style={{ minHeight: '95vh' }} className='align-items-center text-center'>
+                <CarrierCover carrierName={carrierState.name} carrierLogo={logo} />
+                <Row style={{ minHeight: '45vh' }} className='align-items-center text-center'>
                     <Col lg='7'>
-                        <h1>{carrierState?.name}</h1>
+                        <h1>Servicios</h1>
                     </Col>
                     <Col>
-                        <Image src={logo} width={400} roundedCircle fluid />
+                        <ul>
+                            {
+                                !isLoading &&
+                                carrierState.services.map((e) =>
+                                    <li style={serviceListItem}>{e}</li>
+                                )
+                            }
+                        </ul>
                     </Col>
                 </Row>
-                <Row>
-                    <ul>
-                        {
-                            !isLoading &&
-                            carrierState.services.map((e) =>
-                                <li>{e}</li>
-                            )
-                        }
-                    </ul>
+
+                <Row style={{ minHeight: '45vh' }} className='align-items-center text-center justify-content-around'>
+                    <h1>Contacto</h1>
+                    <Col>
+                        Datos de contacto
+                    </Col>
+                    <Col>
+                        Datos de ubicacion
+                    </Col>
                 </Row>
+
             </Container>
         </Container>
     )
