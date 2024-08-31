@@ -14,28 +14,39 @@ import logo from '../assets/logo.jpg'
 export const CarrierProfile = () => {
     const { id } = useParams()
     const [carrierState, setCarrierState] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         const data = findCarrierById(id)
         setCarrierState(data)
+        setIsLoading(false)
     }, [id])
 
     const style = {
         backgroundColor: '#2F4F7F',
-        minHeight: '100vh'
     }
 
 
     return (
-        <Container fluid style={style} >
+        <Container fluid >
             <Container>
                 <Row style={{ minHeight: '95vh' }} className='align-items-center text-center'>
                     <Col lg='7'>
-                        <h1 style={{ color: '#FFFFFF' }}>{carrierState?.name}</h1>
+                        <h1>{carrierState?.name}</h1>
                     </Col>
                     <Col>
                         <Image src={logo} width={400} roundedCircle fluid />
                     </Col>
+                </Row>
+                <Row>
+                    <ul>
+                        {
+                            !isLoading &&
+                            carrierState.services.map((e) =>
+                                <li>{e}</li>
+                            )
+                        }
+                    </ul>
                 </Row>
             </Container>
         </Container>
