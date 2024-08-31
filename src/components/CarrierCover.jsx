@@ -6,7 +6,7 @@ export const CarrierCover = ({ carrierName, carrierLogo }) => {
     return (
         <Row className='align-items-center text-center example'>
             <Col lg='7'>
-                <h1 className='text-white bg-dark rounded p-3'>{carrierName}</h1>
+                <h1 className='text-white bg-dark rounded m-1 p-3'>{carrierName}</h1>
             </Col>
             <Col>
                 <Image src={carrierLogo} width={400} roundedCircle fluid />
