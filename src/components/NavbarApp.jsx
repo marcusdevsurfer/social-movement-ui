@@ -8,13 +8,13 @@ import Container from "react-bootstrap/Container";
 
 export const NavbarApp = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#F7F7F7', minHeight:'8vh' }} >
+        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: 'rgb(10, 133, 55)', minHeight: '8vh' }} >
             <Container>
-                <Navbar.Brand href="/">Social</Navbar.Brand>
-                <Navbar.Toggle />
+                <Navbar.Brand href="/" className="text-white">Social</Navbar.Brand>
+                <Navbar.Toggle className="text-white" />
                 <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Text>
-                        Sesión iniciada como: <a href="#">Mark Otto</a>
+                    <Navbar.Text className="text-white">
+                        Sesión iniciada como: <a className="text-white" href="#">Mark Otto</a>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
