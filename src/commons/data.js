@@ -48,6 +48,7 @@ export const carriers = [
     {
         id: 1,
         name: 'Transportes Flores',
+        slogan: 'Tu destino, nuestra misión',
         email: 'transportesflores@gmail.com',
         phone: '3141986645',
         services: [
@@ -59,6 +60,7 @@ export const carriers = [
     {
         id: 2,
         name: 'Transportes Manzanillo',
+        slogan: 'Movemos tu mundo, un viaje a la vez',
         email: 'transportesmanzanillo@gmail.com',
         phone: '3148765544',
         services: [
@@ -69,6 +71,7 @@ export const carriers = [
     {
         id: 3,
         name: 'Juan Ramos',
+        slogan: 'Conectando rutas, uniendo destinos',
         email: 'juanramos@gmail.com',
         phone: '3148765544',
         services: [
