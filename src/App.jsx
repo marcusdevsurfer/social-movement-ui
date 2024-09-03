@@ -5,16 +5,18 @@ import './App.css'
 import { UnitsBox } from "./components/UnitsBox"
 import { NavbarApp } from "./components/NavbarApp"
 import { CarrierProfile } from "./components/CarrierProfile"
-import { Route } from "wouter"
+import { Route, Switch } from "wouter"
 
 function App() {
   return (
     <>
       <NavbarApp />
-      {/* Unidades compomente */}
-      <Route path="/" component={UnitsBox} />
-      {/* Perfil de la empresa */}
-      <Route path="/profile/:id" component={CarrierProfile} />
+      <Switch>
+        {/* Unidades compomente */}
+        <Route path="/" component={UnitsBox} />
+        {/* Perfil de la empresa */}
+        <Route path="/profile/:id" component={CarrierProfile} />
+      </Switch>
     </>
   )
 }
