@@ -10,7 +10,7 @@ export const CarrierCover = ({ carrierName, carrierLogo }) => {
                 <h1 className='text-start'>{carrierName}</h1>
                 <p className='text-start' style={{textAlign: 'justify'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti blanditiis eius ipsa maiores minus quas voluptatibus neque nam velit optio, veritatis possimus reiciendis architecto harum animi rem ducimus accusamus at.</p>
             </Col>
-            <Col className='text-cente'>
+            <Col className='text-center'>
                 <Image src={carrierLogo} width={350} roundedCircle fluid />
             </Col>
         </Row>
