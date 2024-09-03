@@ -35,7 +35,7 @@ export const CarrierProfile = () => {
 
     return (
         <Container fluid >
-            <CarrierCover carrierName={carrierState.name} carrierLogo={logo} />
+            <CarrierCover carrierName={carrierState.name} carrierLogo={logo} carrierSlogan={carrierState.slogan} />
 
             <Container>
                 <Row style={{ minHeight: '45vh' }} className='align-items-center text-center'>
