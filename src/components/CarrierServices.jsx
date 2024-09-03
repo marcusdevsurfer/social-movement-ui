@@ -6,7 +6,7 @@ export const CarrierServices = ({ services, isLoading }) => {
     return (
         <Row style={{ minHeight: '50vh' }} >
             <Col>
-                <h2 className='text-bold text-center mt-5'>Nuestros Servicios</h2>
+                <h2 className='text-center mt-5'>Nuestros Servicios</h2>
                 <Row className='mt-4'>
                     {!isLoading &&
                         services.map((e) =>
