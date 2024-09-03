@@ -12,15 +12,25 @@ function App() {
   return (
     <>
       <NavbarApp />
-      <Router base='/app'>
-        {/* Unidades compomente */}
+      {/* Unidades compomente
+      <Route path={'/'} component={UnitsBox} />
+
+      {/* Perfil de la empresa 
+      <Router path="/profile" >
+        <Route path="/:id" component={CarrierProfile} >
+        </Route>
+      </Router> */}
+
+      <Switch>
         <Route path="/" component={UnitsBox} />
-        {/* Perfil de la empresa */}
-        <Router path="/profile/:id">
-          <Route path={'/:id'} component={UnitCard}>
-          </Route>
-        </Router>
-      </Router>
+        <Route path="/profile/:id" component={CarrierProfile} />
+        {/* 
+     in wouter, any Route with empty path is considered always active. 
+     This can be used to achieve "default" route behaviour within Switch. 
+     Note: the order matters! See examples below.
+  */}
+        <Route>This is rendered when nothing above has matched</Route>
+      </Switch>;
     </>
   )
 }
