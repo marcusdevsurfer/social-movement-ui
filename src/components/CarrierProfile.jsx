@@ -1,18 +1,11 @@
 import { useEffect, useState } from 'react'
 import { findCarrierById } from '../commons/service'
 import { useParams } from 'wouter'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import logo from '../assets/logo.jpg'
 import { CarrierCover } from './CarrierCover'
 import { CarrierServices } from './CarrierServices'
 import { CarrierContact } from './CarrierContact'
-
-// Azul oscuro (#2F4F7F)
-// Gris claro (#F7F7F7)
-// Verde oscuro (#3E8E41)
-// Blanco (#FFFFFF)
 
 export const CarrierProfile = () => {
     const { id } = useParams()
