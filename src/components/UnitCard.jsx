@@ -2,7 +2,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Stack from 'react-bootstrap/Stack'
 import Badge from 'react-bootstrap/Badge'
-import { Link, useParams } from "wouter";
+import { Link } from "wouter";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 
