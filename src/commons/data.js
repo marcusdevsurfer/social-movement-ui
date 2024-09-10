@@ -47,6 +47,7 @@ export const units = [
 export const carriers = [
     {
         id: 1,
+        picture: 'https://st2.depositphotos.com/8387110/11133/v/450/depositphotos_111334332-stock-illustration-logo-truck-and-trailer.jpg',
         name: 'Transportes Flores',
         slogan: 'Tu destino, nuestra misión',
         email: 'transportesflores@gmail.com',
@@ -59,6 +60,7 @@ export const carriers = [
     },
     {
         id: 2,
+        picture: 'https://www.zarla.com/images/zarla-intercarga-1x1-2400x2400-20220325-vwvmmw7bqxwg3rmmjmx3.png?crop=1:1,smart&width=250&dpr=2',
         name: 'Transportes Manzanillo',
         slogan: 'Movemos tu mundo, un viaje a la vez',
         email: 'transportesmanzanillo@gmail.com',
@@ -70,6 +72,7 @@ export const carriers = [
     },
     {
         id: 3,
+        picture: 'https://i.pinimg.com/originals/c1/5b/e2/c15be2c62961ad37577a4ae17af24c1c.jpg',
         name: 'Juan Ramos',
         slogan: 'Conectando rutas, uniendo destinos',
         email: 'juanramos@gmail.com',
