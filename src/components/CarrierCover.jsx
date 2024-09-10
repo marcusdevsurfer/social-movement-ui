@@ -2,8 +2,15 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import './carrierCover.css'
+import { useEffect } from 'react'
 
 export const CarrierCover = ({ carrierName, carrierLogo, carrierSlogan }) => {
+
+    // useEffect(() => {
+    //     setInterval(() => console.log("Interval funcionando..."), 2500)
+
+    //     return clearInterval()
+    // }, [])
 
     //Titulos
     const titleColor = '#020817'
@@ -17,7 +24,7 @@ export const CarrierCover = ({ carrierName, carrierLogo, carrierSlogan }) => {
                 <p className='text-start' style={{ textAlign: 'justify', color: subtitle }}>{carrierSlogan}</p>
             </Col>
             <Col className='text-center'>
-                <Image src={carrierLogo} width={350} roundedCircle fluid />
+                <Image src={carrierLogo}  width={350} roundedCircle fluid />
             </Col>
         </Row>
     )
