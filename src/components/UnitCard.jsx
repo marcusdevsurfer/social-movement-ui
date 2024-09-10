@@ -2,13 +2,11 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Stack from 'react-bootstrap/Stack'
 import Badge from 'react-bootstrap/Badge'
-import img from '../assets/example.png'
 import { Link, useParams } from "wouter";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 
 export const UnitCard = ({ carrier, unit }) => {
-    const { id } = useParams()
     return (
         <Col lg='4' className='p-2' key={unit.id}>
             <Card key={unit.id}>
