@@ -20,7 +20,7 @@ export const UnitCard = ({ carrier, unit }) => {
                 </Card.Header>
 
                 <Card.Body>
-                    <Card.Img src={img} />
+                    <Card.Img src={unit.image}/>
                 </Card.Body>
 
                 <Card.Footer>
