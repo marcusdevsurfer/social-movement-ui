@@ -8,8 +8,8 @@ export const units = [
             phone: '3141986645'
         },
         unit: {
+            image: 'https://www.autosderenta.mx/images/nissan-nv300.jpg',
             ton: '3.5',
-            service: ''
         }
     },
     {
@@ -21,8 +21,8 @@ export const units = [
             phone: '3148765544'
         },
         unit: {
-            ton: '4.0',
-            service: ''
+            image: 'https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_777e3e42c40c40b28646b751df709e15.jpg',
+            ton: '4.0'
         }
     }
     ,
@@ -36,10 +36,9 @@ export const units = [
         },
         unit: {
             ton: '5.0',
-            service: ''
+            image: 'https://isuzuguadalajara.com/images/block/block-1/camion-slider586edcb7725aa.png'
         }
     }
-
 ]
 
 
