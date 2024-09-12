@@ -1,33 +1,35 @@
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Stack from 'react-bootstrap/Stack'
-import Badge from 'react-bootstrap/Badge'
 import { Link } from "wouter";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
+import './unitcard.css'
+
 
 export const UnitCard = ({ carrier, unit }) => {
     return (
         <Col lg='4' className='p-2' key={unit.id}>
             <Card key={unit.id}>
                 <Card.Header style={{ backgroundColor: '#FFFFFF' }}>
-                    <Stack direction='horizontal'>
-                        <h5 className='m-0'>{carrier.name}</h5>
-                        <Link style={{ backgroundColor: '#F7F7F7' }} className='btn btn-sm ms-auto' to={'/profile/' + carrier.id}>Ver perfil</Link>
-                    </Stack>
+                    <Card.Img src={unit.image} />
                 </Card.Header>
-
                 <Card.Body>
-                    <Card.Img src={unit.image}/>
+                    <h5 className='fw-700'>{carrier.name}</h5>
+                    <Stack gap={2} direction='horizontal'>
+                        <span className='unit-badge'>{unit.ton} Toneladas</span>
+                        <span className='unit-badge'>Carga suelta</span>
+                    </Stack>
+                    <h5 className='fw-700'>Contacto</h5>
+                    <Stack gap={2} direction='horizontal'>
+                        <span className='unit-badge'><HiOutlineMail /> {carrier.email}</span>
+                        <span className='unit-badge'><HiOutlinePhoneOutgoing /> {carrier.phone}</span>
+                    </Stack>
                 </Card.Body>
-
                 <Card.Footer>
-                    <h5 className='m-0'>Caracteristicas</h5>
-                    <Badge className='bg-secondary'>{unit.ton} Toneladas</Badge>
-                    <Badge className='bg-secondary ms-1'>Carga suelta</Badge>
-                    <h5 className='m-0'>Contacto</h5>
-                    <Badge className='bg-secondary'><HiOutlineMail/> {carrier.email}</Badge>
-                    <Badge className='bg-secondary ms-1'><HiOutlinePhoneOutgoing/> {carrier.phone}</Badge>
+                    <Stack>
+                        <Link className='btn-sm btn btn-secondary' to={'/profile/' + carrier.id}>Ver perfil</Link>
+                    </Stack>
                 </Card.Footer>
             </Card>
         </Col>
