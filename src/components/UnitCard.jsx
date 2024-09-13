@@ -9,7 +9,7 @@ import './unitcard.css'
 
 export const UnitCard = ({ carrier, unit }) => {
     return (
-        <Col lg='4' className='p-2' key={unit.id}>
+        <Col md='6' lg='4' className='p-2' key={unit.id}>
             <Card key={unit.id}>
                 <Card.Header style={{ backgroundColor: '#FFFFFF' }}>
                     <Card.Img src={unit.image} />
