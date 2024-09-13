@@ -1,5 +1,5 @@
  .hero {
-    background: linear-gradient(#26262780, transparent 40rem),
+    background: linear-gradient(#26262780, transparent 250rem),
        url(https://scontent.fclq2-1.fna.fbcdn.net/o1/v/t0/f1/m340/genai_m4_vll_ftw_v3:upload_img_31920735_09_11_2024_19_39_26_391554_8006443340027996941.jpeg?_nc_ht=scontent.fclq2-1.fna.fbcdn.net&_nc_cat=107&ccb=9-4&oh=00_AYDogKGxIhng4-7MtmtgXRxwGT2qnxBmUC1i4lukDS2sug&oe=66E43B84&_nc_sid=5b3566);
     background-position: top;
     background-size: cover;
@@ -8,7 +8,9 @@
  }
 
  .transport-name {
+    margin-left: 0;
     color: white;
+    font-size: 2.5rem;
     font-weight: 700;
  }
 
