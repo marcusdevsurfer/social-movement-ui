@@ -5,17 +5,26 @@ import './App.css'
 import { UnitsBox } from "./components/UnitsBox"
 import { NavbarApp } from "./components/NavbarApp"
 import { CarrierProfile } from "./components/CarrierProfile"
-import { Route, Switch } from "wouter"
+import { Route, Router, useLocation } from "wouter"
+import { useEffect } from 'react'
 
 function App() {
+  const [location, setLocation] = useLocation()
+  const ScrollToTop = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [location]);
+    return null;
+  }
+
   return (
     <>
       <NavbarApp />
-      <Switch>
+      <Router>
+        <ScrollToTop />
         <Route path="/" component={UnitsBox} />
         <Route path="/profile/:id" component={CarrierProfile} />
-        <Route>This is rendered when nothing above has matched</Route>
-      </Switch>
+      </Router>
     </>
   )
 }
