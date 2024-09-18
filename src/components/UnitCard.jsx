@@ -1,13 +1,14 @@
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Stack from 'react-bootstrap/Stack'
-import { Link } from "wouter";
+import Button from 'react-bootstrap/Button'
+import { useLocation } from "wouter";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 import './unitcard.css'
 
-
 export const UnitCard = ({ carrier, unit }) => {
+    const [location, setLocation] = useLocation()
     return (
         <Col md='6' lg='4' className='p-2' key={unit.id}>
             <Card key={unit.id}>
@@ -28,7 +29,7 @@ export const UnitCard = ({ carrier, unit }) => {
                 </Card.Body>
                 <Card.Footer>
                     <Stack>
-                        <Link className='btn-sm btn btn-secondary' to={'/profile/' + carrier.id}>Ver perfil</Link>
+                        <Button variant='dark' size='sm' onClick={() => setLocation('/profile/' + carrier?.id)}>Ver Perfil</Button>
                     </Stack>
                 </Card.Footer>
             </Card>
