@@ -1,9 +1,8 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-const navbarBg = '#000000'
 export const NavbarApp = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: navbarBg, minHeight: '8vh' }} >
+        <Navbar collapseOnSelect expand="lg" bg="dark" >
             <Container>
                 <Navbar.Brand href="/" className="text-white">Social</Navbar.Brand>
                 {/* <Navbar.Toggle className="text-white" />
