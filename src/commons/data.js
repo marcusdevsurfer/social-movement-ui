@@ -5,42 +5,24 @@ export const units = [
         model: "Nissan 2020",
         image: 'https://www.autosderenta.mx/images/nissan-nv300.jpg',
         ton: '3.5',
-        carrier: {
-            id: 1,
-            name: 'Transportes Flores',
-            email: 'transportesflores@gmail.com',
-            phone: '3141986645'
-        }
-        
+        carrierId: 1,
+    },
+    {
+        id: 2,
+        name: "Camion",
+        model: "Azuzu 2022",
+        image: 'https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_777e3e42c40c40b28646b751df709e15.jpg',
+        ton: '2.0',
+        carrierId: 2,
+    },
+    {
+        id: 3,
+        name: "Camion",
+        model: "Izuzu 2023",
+        image: 'https://isuzuguadalajara.com/images/block/block-1/camion-slider586edcb7725aa.png',
+        ton: '3.0',
+        carrierId: 3,
     }
-    // ,
-    // {
-    //     id: 2,
-    //     carrier: {
-    //         id: 2,
-    //         name: 'Transportes Manzanillo',
-    //         email: 'transportesmanzanillo@gmail.com',
-    //         phone: '3148765544'
-    //     },
-    //     unit: {
-    //         image: 'https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_777e3e42c40c40b28646b751df709e15.jpg',
-    //         ton: '4.0'
-    //     }
-    // }
-    // ,
-    // {
-    //     id: 3,
-    //     carrier: {
-    //         id: 3,
-    //         name: 'Juan Ramos',
-    //         email: 'juanramos@gmail.com',
-    //         phone: '3148765544'
-    //     },
-    //     unit: {
-    //         ton: '5.0',
-    //         image: 'https://isuzuguadalajara.com/images/block/block-1/camion-slider586edcb7725aa.png'
-    //     }
-    // }
 ]
 
 
