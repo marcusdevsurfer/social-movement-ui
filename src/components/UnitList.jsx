@@ -7,12 +7,10 @@ export const UnitList = ({ query }) => {
         <Row>
             {
                 units
-                    .filter((e) => query == ''
+                    .filter((unit) => query == ''
                         ? units
-                        : e.carrier.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()) || e.unit.ton.includes(query))
-                    .map(({ carrier, unit }) =>
-                        <UnitCard key={unit.id} carrier={carrier} unit={unit} />
-                    )
+                        : unit.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()) || unit.ton.includes(query))
+                    .map((unit) => <UnitCard key={unit.id} unit={unit} />)
             }
         </Row>
     )
