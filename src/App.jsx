@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 
 function App() {
   const [location, setLocation] = useLocation()
+  
   const ScrollToTop = () => {
     useEffect(() => {
       window.scrollTo(0, 0)
