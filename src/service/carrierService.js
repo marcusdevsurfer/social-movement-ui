@@ -1,7 +1,7 @@
-import { units, carriers } from "../commons/data"
+import { carriers } from "../commons/data"
 
 export const getAllCarriers = () => carriers
 
 export const getCarrierById = (id) => {
-    return carriers.find((carrier) => carrier.id === id)
+    return carriers.find((carrier) => carrier.id == id)
 }

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { findCarrierById } from '../commons/service'
 import { useParams } from 'wouter'
 import Container from 'react-bootstrap/Container'
 import { CarrierCover } from './CarrierCover'
 import { CarrierServices } from './CarrierServices'
 import { CarrierContact } from './CarrierContact'
+import { getCarrierById } from '../service/carrierService'
 
 export const CarrierProfile = () => {
     const { id } = useParams()
@@ -12,8 +12,7 @@ export const CarrierProfile = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        const data = findCarrierById(id)
-        setCarrierState(data)
+        setCarrierState(getCarrierById(id))
         setIsLoading(false)
     }, [])
 
